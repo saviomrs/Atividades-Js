@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Financie seu veículo</title>
+    <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!-- Meu CSS / Js -->
+<link rel="stylesheet" href="style.css">
+<script src="venda.js" async></script>
+</head>
+
+<body>
+<!-- Image and text -->
+<div class="container">
+<nav class="navbar navbar-light bg-dark">
+    <a class="navbar-brand" href="#">
+      <img src="img/logomarca.png" width="200" height="100" class="d-inline-block align-top" alt="">
+    </a>
+  </nav>
+  <div class="d-flex">
+
+    <div class=" formulário">
+      <form class="form-inline" action="/action_page.php">
+        <form name="simulacao">
+          <div class="form-group">
+            <label for="modelo">Modelo do Veículo: </label>
+            <input type="modelo" class="form-control" id="modelo" required>
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="valor">Valor do Veículo: </label>
+            <input type="valor" class="form-control" placeholder="R$" id="valor" required>
+          </div>
+          <div class="btnform">
+            <button type="button" value="simular" class="btn btn-dark" id="btnSimular">Simular</button>
+          </div>
+        </form>
+      </form>
+    </div>
+    <div class="p-2 flex-grow-1"><img
+        src="img/carro.png"
+        alt="" height="500px" width="auto"></div>
+  </div>
+  <hr>
+  <h1>Simulação</h1>
+  <div id="mostrarSimulacao">
+  </div>
+  <br>
+  <br>
+
+
+
+
+
+<nav class="navbar navbar-light bg-dark">
+    <a class="navbar-brand" href="#">
+      <img src="img/logomarca.png" width="200" height="100" class="d-inline-block align-top" alt="">
+    </a>
+  </nav>
+</div>  
+</body>
+</html>
