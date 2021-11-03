@@ -3,64 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Financie seu veículo</title>
-    <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<!-- Meu CSS / Js -->
-<link rel="stylesheet" href="style.css">
-<script src="venda.js" async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="venda.js" async></script>
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Simulação</title>
 </head>
 
 <body>
-<!-- Image and text -->
-<div class="container">
-<nav class="navbar navbar-light bg-dark">
-    <a class="navbar-brand" href="#">
-      <img src="img/logomarca.png" width="200" height="100" class="d-inline-block align-top" alt="">
-    </a>
-  </nav>
-  <div class="d-flex">
+    <div class="container">
 
-    <div class=" formulário">
-      <form class="form-inline" action="/action_page.php">
-        <form name="simulacao">
-          <div class="form-group">
-            <label for="modelo">Modelo do Veículo: </label>
-            <input type="modelo" class="form-control" id="modelo" required>
-          </div>
-          <br>
-          <div class="form-group">
-            <label for="valor">Valor do Veículo: </label>
-            <input type="valor" class="form-control" placeholder="R$" id="valor" required>
-          </div>
-          <div class="btnform">
-            <button type="button" value="simular" class="btn btn-dark" id="btnSimular">Simular</button>
-          </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo.png" alt="">
+              </a>
+            <a class="navbar-brand" href="#">Simule aqui a sua compra!</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+    
+<br>
+
+<p>Trabalhamos com 50% de entrada e o restante em 60 vezes.</p>
+
+    <div class="formulário">
+        <form class="form-inline" action="/action_page.php">
+          <form name="simulacao">
+            <div class="form-group ">
+              <label for="modelo">Modelo do Veículo: </label>
+              <input type="modelo" class="form-control" id="modelo" required>
+            </div>
+            <br>
+            <br>
+            <div class="form-group">
+              <label for="valor">Valor do Veículo: </label>
+              <input type="valor" class="form-control" placeholder="R$" id="valor" required>
+            </div>
+            <br>
+            <br>
+            <div class="btnform">
+              <button type="button" value="simular" class="btn btn-dark" id="btnSimular">Simular</button>
+            </div>
+          </form>
         </form>
-      </form>
+      </div>
+
+      <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/argo.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h3>Fiat Argo R$ 48,000</h3>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/hb20.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Hyundai HB20 R$ 46,000</h3>
+              
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/kwid.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h3>Renault kwid R$ 43,000</h3>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </button>
+      </div>
+      
+
+      <hr>
+      <h1>Simulação</h1>
+      <div id="mostrarSimulacao">
+      </div>
     </div>
-  <div class="p-2 flex-grow-1"><img
-        src="img/carro.png"
-        alt="" height="500px" width="auto"></div>
-  </div>
-  <hr>
-  <h1>Simulação</h1>
-  <div id="mostrarSimulacao">
-  </div>
-  <br>
-  <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+    <footer class="text-muted">
+        <div class="container">
+          <p class="float-right">
+            <a class="btn btn-dark" href="#">Voltar ao topo</a>
+          </p>
+          <img src="img/logo.png" alt="">  <p class="text-black drop-shadow text-center"><a class="text-black drop-shadow" href="index.html">Simule seu veículo</a> © Todos os direitos reservados.</p>
+          
+        </div>
+      </footer>
 
 
 
 
-
-<nav class="navbar navbar-light bg-dark">
-    <a class="navbar-brand" href="#">
-      <img src="img/logomarca.png" width="200" height="100" class="d-inline-block align-top" alt="">
-    </a>
-  </nav>
-</div>  
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 </body>
 </html>
