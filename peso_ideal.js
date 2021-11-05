@@ -1,6 +1,6 @@
 btnCalcular.addEventListener('click', function () { 
     
-    formAltura = altura.value
+    Altura = altura.value
     sexoFeminino
 
     
@@ -10,7 +10,7 @@ btnCalcular.addEventListener('click', function () {
        fatorPeso = 22
     }
 
-    peso = fatorPeso * Math.pow(formAltura, 2).toFixed(2)
+    peso = fatorPeso * Math.pow(Altura, 2).toFixed(2)
 
     
     Peso = document.getElementById('pesoIdeal')
