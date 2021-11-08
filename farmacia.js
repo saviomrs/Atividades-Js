@@ -10,7 +10,7 @@ function CalcularPromocao() {
     let precoDoMedicamento = Number(Math.floor(inputPrecoDoMedicamento.value) * 1.6);
 
     outNomeDoMedicamento.textContent = `Promoção de ${medicamento}`;
-    outPrecoDaPromocao.textContent = `Leve 2 pro R$ ${precoDoMedicamento}`;
+    outPrecoDaPromocao.textContent = `Leve 2 por R$ ${precoDoMedicamento}`;
 
 }
 
