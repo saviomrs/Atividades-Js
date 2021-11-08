@@ -1,3 +1,3 @@
-# atividades-js
+# atividades-js.
 
 https://saviomrs.github.io/atividades-js/
