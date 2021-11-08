@@ -7,7 +7,7 @@ const outPrecoDaPromocao = document.getElementById('outPrecoDaPromocao');
 function CalcularPromocao() {
     
     let medicamento = inputMedicamento.value;
-    let precoDoMedicamento = Number(Math.floor(inputPrecoDoMedicamento.value) * 2);
+    let precoDoMedicamento = Number(Math.floor(inputPrecoDoMedicamento.value) * 1.6);
 
     outNomeDoMedicamento.textContent = `Promoção de ${medicamento}`;
     outPrecoDaPromocao.textContent = `Leve 2 pro R$ ${precoDoMedicamento}`;
