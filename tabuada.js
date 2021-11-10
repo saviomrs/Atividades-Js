@@ -8,7 +8,7 @@ function mostrarTabuada() {
     let tabuada = '';
 
     if (inputNumero.value == '' || isNaN(numero)) {
-        alert('Digite um número !');
+        alert('Digite um número inteiro!');
         inputNumero.value = '';
         inputNumero.focus();
         return;
