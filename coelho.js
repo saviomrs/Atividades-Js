@@ -23,7 +23,7 @@ function mostarPrevisao() {
 
     for (let index = 1; index <= numeroDeAnos; index++) {
         quantidade += `${index}º Ano: ${total} Coelhos.\n`;
-        total *= 3;
+        total *= 7;
         
     }
 
