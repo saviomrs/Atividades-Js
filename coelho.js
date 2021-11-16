@@ -13,7 +13,7 @@ function mostarPrevisao() {
     let total = numeroCoelhos;
     let quantidade = '';
 
-    if (numeroCoelhos < 2 || numeroDeAnos == 0 || isNaN(numeroCoelhos) || isNaN(numeroDeAnos)) {
+    if (numeroCoelhos < 3 || numeroDeAnos == 0 || isNaN(numeroCoelhos) || isNaN(numeroDeAnos)) {
         alert('Preencha os campos corretamente');
         inputCoelhos.value = '';
         inputAno.value = '';
