@@ -18,13 +18,23 @@ const mostrarNoticias = function(valor){
     if(valor != true) {
         if(todasNoticias.length == 0) return alert('Você não possui notícias cadastradas')
     }
+
+    let mostrarNoticias = Number(prompt('Quantas noticias você gostaria de ver ?'));
+    let totalDeNoticias = todasNoticias.length;
+
+    if ((mostrarNoticias == 0) || isNaN(mostrarNoticias) || mostrarNoticias > totalDeNoticias) {
+        alert('Escolha um número menor ou igual ao de notícias cadastradas!');
+        return;
+    }
+
+   
     document.querySelector("#tituloNoticias").style = "display: none"
     document.querySelector("#mostrarNoticias").innerHTML = ``
     todasNoticias.forEach(function(texto, numero){
         if(texto != "") {
             
             document.querySelector("#mostrarNoticias").innerHTML += `
-            <article class="message is-info is-medium"><div class="message-header"><h1>Notícia ${numero+1}</h1><span onclick="deletarUma(${numero+1})" class = "fechamento" id="fechar${numero+1}">x</span></div><div class="message-body">${texto}</div></article>`
+            <article class="message is-dark"><div class="message-header"><h1>Notícia ${numero+1}</h1><span onclick="deletarUma(${numero+1})" class = "fechamento" id="fechar${numero+1}">x</span></div><div class="message-body">${texto}</div></article>`
         }
     })
 }
