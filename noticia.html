@@ -1,108 +1,39 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jornal</title>
-  <link rel="shortcut icon" href="img/favicon.ico" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-  
-  <script src="noticia.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    
+    <title>Últimas notícias</title>
 </head>
-
 <body>
- 
-    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="noticia.html">
-            <img src="img/jornal.png" width="50" height="100">
-          </a>
-      
-          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-      
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item">
-              Home
-            </a>
-      
+    <div class="container">
+        <br>
+        <h1>Últimas notícias</h1>
+
+        <div>
+            <textarea class="textarea is-primary" placeholder="Digite aqui a Notícia" id="inputNoticia"></textarea>
            
-      
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">
-                Sobre o Jornal
-              </a>
-      
-              <div class="navbar-dropdown">
-                <a class="navbar-item">
-                  Quem somos
-                </a>
-                <a class="navbar-item">
-                  Vagas de emprego
-                </a>
-                <a class="navbar-item">
-                    Contato
-                </a>
-                
-              </div>
-            </div>
-          </div>
-      
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="buttons">
-                <a class="button is-primary">
-                  <strong>Sign up</strong>
-                </a>
-                <a class="button is-light">
-                  Log in
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
-      </nav>
-
-  <section class="section">
-    <div class="container">
-      <h1 class="title textoAdd">Adicionar nova notícia</h1>
-      <hr>
-      <div class="field">
-        <label class="label">Notícia</label>
-        <div class="control">
-          <textarea class="textarea is-success" required id="noticia" placeholder="Digite aqui sua notícia"></textarea>
-        </div>
-      </div>
-      <div class="field is-grouped is-grouped-centered">
-        <div class="control">
-          <button class="button is-link is-rounded" id="btnCadastrarNoticia">Cadastrar</button>
-        </div>
-        <div class="control">
-          <button class="button is-link is-light is-rounded" id="btnMostrar">Listar Notícias (atualizar)</button>
-        </div>
-        <div class="control">
-          <button class="button is-link is-danger is-rounded" id="btnDeletar">Deletar Todas as Noticias!</button>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="section">
-    <div class="container">
-      <h2 class="subtitle" id="tituloNoticias">
-        Aperte o botao:Listar Notícias (atualizar) para, mostrar as <span id="qtdNoticias"></span> últimas notícias
-      </h2>
-      <div id="mostrarNoticias">
-
-      </div>
-    </div>
-  </section>
+        <br>
+        <div class="buttons">
+            <button class="button is-info" id="btnAdicionar">Cadastrar</button>
+  <button class="button is-success" id="btnListarNoticia">Listar Notícia</button>
   
+  <button class="button is-danger" id="btnDeletar">Deletar Notícias</button>
+        </div>
+        
+        <div>
+            <h2 id="outNumeroDeNoticias"></h2>
+        </div>
+        <br>
+        <div>
+            <pre id="outNoticias"></pre>
+        </div>
+    </div>
+
+    <script src="noticia.js"></script>
 </body>
 </html>

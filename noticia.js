@@ -1,75 +1,70 @@
+const inputNoticia = document.getElementById('inputNoticia');
+const btnAdicionar = document.getElementById('btnAdicionar');
+const btnListarNoticia = document.getElementById('btnListarNoticia');
+const outNumeroDeNoticias = document.getElementById('outNumeroDeNoticias');
+const outNoticias = document.getElementById('outNoticias');
 
-let todasNoticias = []
+let noticias = [];
 
- 
-document.querySelector("#tituloNoticias").style = "display: none"
+function adicionarNoticias() {
+    
+    let noticiaCadastrada = inputNoticia.value;
 
-
-const cadastrarNoticia = function(){
-    if(noticia.value == "") return alert('Digite uma notícia')
-    todasNoticias.push(noticia.value)
-    document.querySelector("#qtdNoticias").innerHTML = todasNoticias.length
-    document.querySelector("#tituloNoticias").style = "display: block"
-    noticia.value = ""
-    document.querySelector("#noticia").focus()
-}
-
-const mostrarNoticias = function(valor){
-    if(valor != true) {
-        if(todasNoticias.length == 0) return alert('Você não possui notícias cadastradas')
+    if (noticiaCadastrada == '') {
+        alert('adicione allguma notícia!');
+        inputNoticia.focus();
+        return;
     }
 
+    noticias.push(noticiaCadastrada);
+    let lista = '';
+
+    for (let index = 0; index < noticias.length; index++) {
+        lista = `Número de notícias cadastrada: ${index + 1}`;
+    }
+    // Alternativa de solução ao inves de utilizar o codigo a partir de let lista = '';
+    /*
+    
+    outNumeroDeNoticias.textContent = noticias.length;
+    
+    */
+    inputNoticia.value = '';
+    inputNoticia.focus();
+
+    outNumeroDeNoticias.textContent = lista;
+}
+
+btnAdicionar.addEventListener('click', adicionarNoticias);
+
+function listarNoticias() {
+    
     let mostrarNoticias = Number(prompt('Quantas noticias você gostaria de ver ?'));
-    let totalDeNoticias = todasNoticias.length;
+    let totalDeNoticias = noticias.length;
 
     if ((mostrarNoticias == 0) || isNaN(mostrarNoticias) || mostrarNoticias > totalDeNoticias) {
         alert('Escolha um número menor ou igual ao de notícias cadastradas!');
         return;
     }
 
-   
-    document.querySelector("#tituloNoticias").style = "display: none"
-    document.querySelector("#mostrarNoticias").innerHTML = ``
-    todasNoticias.forEach(function(texto, numero){
-        if(texto != "") {
-            
-            document.querySelector("#mostrarNoticias").innerHTML += `
-            <article class="message is-dark"><div class="message-header"><h1>Notícia ${numero+1}</h1><span onclick="deletarUma(${numero+1})" class = "fechamento" id="fechar${numero+1}">x</span></div><div class="message-body">${texto}</div></article>`
-        }
-    })
+    let ultimasNoticias = `${mostrarNoticias} Última(s) notícia(s)\n\n`;
+
+    for (let i = totalDeNoticias - 1; i >= totalDeNoticias - mostrarNoticias; i--) {
+        ultimasNoticias += `${i + 1}º) ${noticias[i]}\n`;
+    }
+
+    outNoticias.textContent = ultimasNoticias;
 }
 
 const deletarNoticias = function(){
-    if(todasNoticias.length == 0) return alert('Não há notícias para deletar!')
-    document.querySelector("#tituloNoticias").style = "display: none"
-    document.querySelector("#mostrarNoticias").innerHTML = ``
-     while(todasNoticias.length > 0){
-         todasNoticias.splice(todasNoticias.lenght, 1)
+    if(outNumeroDeNoticias.length == 0) return alert('Não há notícias para deletar!')
+    document.querySelector("#outNoticias").innerHTML = ``
+     while(outNumeroDeNoticias.length > 0){
+         outNumeroDeNoticias.splice(outNumeroDeNoticias.lenght, 1)
     }
 }
 
-const deletarUma = function(msg){
-    todasNoticias.splice(msg-1, 1);
-    mostrarNoticias(true)
-}
 
 
-btnCadastrarNoticia.addEventListener('click', cadastrarNoticia)
-
-btnMostrar.addEventListener('click', mostrarNoticias)
+btnListarNoticia.addEventListener('click', listarNoticias);
 
 btnDeletar.addEventListener('click', deletarNoticias)
-
-btnRecarregar.addEventListener('click', function(){
-    location.reload();
-})
-
-btnListarNav.addEventListener('click', function(){
-    mostrarNoticias()
-})
-
-btnDeletarNav.addEventListener('click', function(){
-    deletarNoticias()
-})
-
-
