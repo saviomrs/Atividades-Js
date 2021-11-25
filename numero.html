@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=n">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <title>Acerte o Número!</title>
+</head>
+<body>
+<div class="container">
+    <br>
+<h1>Jogo Descubra o Número</h1>
+<br>
+<p>Número:
+    <input class="input is-danger" type="text" placeholder="Digite um número inteiro" id="inNumero">
+    <br>
+    <br>
+    <button class="button is-danger" value="Apostar" id="btApostar">Apostar</button>
+    <br>
+    <br>
+
+</p>
+<hr>
+<h3>Erros:
+    <span id="outErros">0</span>
+</h3>
+
+<h3>Chances:
+    <span id="outChances">6</span>
+</h3>
+<br>
+<h3 id="outDica" class="bold">Dica: É um número entre 1 e 100</h3>
+
+</div>
+
+  <script src="numero.js"></script>  
+</body>
+</html>
