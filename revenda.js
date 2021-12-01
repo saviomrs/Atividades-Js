@@ -93,7 +93,7 @@ function filtrarCarros() {
 
         } else {
             
-            outLista.textContent = `Carros com preço até R$: ${valorMaximo.toFixed(2)}\n ------------------ \n${lista}\n`;
+            outLista.textContent = `Carros com preço até R$: ${valorMaximo.toFixed(2)}\n ------------------------------------------ \n${lista}\n`;
         }
     }
 }
